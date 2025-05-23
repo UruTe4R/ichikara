@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95svh;
+}
+
+.h2 {
+  text-align: center;
+}
+
+.button {
+  margin-top: 1rem;
+  border-radius: 4px;
+  background-color: skyblue;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: blue;
+}

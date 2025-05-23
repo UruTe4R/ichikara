@@ -1,0 +1,55 @@
+.footer {
+  background-color: var(--ichikara-blue);
+  color: white;
+  height: 50px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  font-size: 0.75rem;
+  padding: 0 1rem;
+}
+
+.reservedText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: span 5;
+}
+
+.leftside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.navIcon {
+  width: 1.5rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 0.25rem;
+
+  fill: white;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.navIcon:hover {
+  background-color: white;
+  fill: var(--ichikara-blue);
+  transform: translateY(-5px);
+}

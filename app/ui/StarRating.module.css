@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.rating {
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
+
+.starContainer > * + * {
+  margin-left: -0.15rem;
+}
+
+.starContainer > * {
+  color: goldenrod;
+}
+
+.number {
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
