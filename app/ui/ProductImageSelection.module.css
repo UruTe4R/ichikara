@@ -1,7 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
+
 }
+
 
 .imageContainer {
     position: relative;
@@ -10,12 +12,40 @@
     overflow: hidden;
 
     border-radius: 7px;
-    width: 500px;
-    height: 500px;
+  }
+
+  .selectedImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .productImage {
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .productImage:hover{
+    transform: scale(1.1);
+  }
+
+  .imageGallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0.5rem;
+
+    margin-top: 1rem;
+  }
+  .imageGalleryItem {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+
+    border-radius: 7px;
+
+    grid-column: span 1;
   }

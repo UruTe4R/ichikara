@@ -9,23 +9,20 @@ export const metadata: Metadata = {
 }
 export default function ProductPage() {
   return (
-    <>
-    <h1>Product Page</h1>
-    <main className={styles.page}>
+    <section className={styles.productInfoSection}>
 
-      <section className={styles.leftside}>
-        <div className={styles.stickyBox}>I am Sticky</div>
-        
-      </section>
+      <div className={styles.imageSection}>
+        <ProductImageSelection />
+      </div>
 
-      <section className={styles.rightside}>
+      <div className={styles.productDetail}>
         <div>
-        {Array.from({ length: 200 }).map((_, i) => (
+        {Array.from({ length: 100 }).map((_, i) => (
           <p key={i}>Right content line {i + 1}</p>
         ))}
       </div>
-      </section>
-    </main>
-    </>
+      </div>
+    </section>
+
   )
 }

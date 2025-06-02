@@ -8,39 +8,61 @@ import Link from 'next/link';
 import SearchBar from '@/app/components/navbar/SearchBar';
 import UserNav from '@/app/components/navbar/UserNav';
 export default function Nav() {
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setHidden(true); // scrolling down
+      } else {
+        setHidden(false); // scrolling up
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
     <nav 
-      className={styles.nav}
+      className={`${styles.nav} ${hidden ? styles.hidden : styles.show}`}
     >
-      {/* logo */}
-      <Link 
-        href='/'
-      >
-        <div className={styles.logo}>
-          <span className={styles.arrow}>UNO{'>'}{'>'}{'>'}</span>
-          ichikara
-          
-        </div>
-      </Link>
+      <div className={styles.flexcontainer}>
 
-      {/* links */}
-      <ul className={styles.links}>
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='/about'>About</Link>
-        </li>
-        <li>
-          <Link href='/contact'>Contact</Link>
-        </li>
-      </ul>
+      
+        {/* logo */}
+        <Link 
+          href='/'
+        >
+          <div className={styles.logo}>
+            <span className={styles.arrow}>UNO{'>'}{'>'}{'>'}</span>
+            ichikara
+            
+          </div>
+        </Link>
 
-      {/* Search */}
-      <SearchBar />
+        {/* links */}
+        <ul className={styles.links}>
+          <li>
+            <Link href='/'>Home</Link>
+          </li>
+          <li>
+            <Link href='/about'>About</Link>
+          </li>
+          <li>
+            <Link href='/contact'>Contact</Link>
+          </li>
+        </ul>
 
-      {/* UserNav */}
-      <UserNav />
+        {/* Search */}
+        <SearchBar />
+
+        {/* UserNav */}
+        <UserNav />
+      </div>
       
     </nav>
   )

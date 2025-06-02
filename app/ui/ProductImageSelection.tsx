@@ -28,12 +28,48 @@ const images = [
       width: 1280,
       height: 720,
     },
+    {
+      id: 4,
+      src: '/images/beach_1.jpg',
+      alt: 'beach',
+      width: 1280,
+      height: 720,
+    },
+    {
+      id: 5,
+      src: '/images/cabin_2.jpg',
+      alt: 'beach',
+      width: 1280,
+      height: 720,
+    },
+    {
+      id: 6,
+      src: '/images/tiny_house_2.jpg',
+      alt: 'beach',
+      width: 1280,
+      height: 720,
+    },
+    {
+      id: 7,
+      src: '/images/villa_1.jpg',
+      alt: 'beach',
+      width: 1280,
+      height: 720,
+    },
+    {
+      id: 8,
+      src: '/images/beach_1.jpg',
+      alt: 'beach',
+      width: 1280,
+      height: 720,
+    },
   ]
 
 
 export default function ProductImageSelection() {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  
 
 
   return (
@@ -44,7 +80,7 @@ export default function ProductImageSelection() {
           alt='beach'
           width={1280}
           height={720}
-          className={styles.productImage}
+          className={styles.selectedImage}
           />
         </div>
 
