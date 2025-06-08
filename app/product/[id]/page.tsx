@@ -9,20 +9,27 @@ export const metadata: Metadata = {
 }
 export default function ProductPage() {
   return (
-    <section className={styles.productInfoSection}>
+    <>
+      <main className={styles.productInfoSection}>
 
-      <div className={styles.imageSection}>
-        <ProductImageSelection />
-      </div>
+        <div className={styles.imageSection}>
+          <ProductImageSelection />
+        </div>
 
-      <div className={styles.productDetail}>
-        <div>
-        {Array.from({ length: 100 }).map((_, i) => (
-          <p key={i}>Right content line {i + 1}</p>
-        ))}
-      </div>
-      </div>
-    </section>
+        <div className={styles.productDetail}>
+          <div>
+          {Array.from({ length: 100 }).map((_, i) => (
+            <p key={i}>Right content line {i + 1}</p>
+          ))}
+        </div>
+        </div>
+      </main>
+      <div>
+          {Array.from({ length: 100 }).map((_, i) => (
+            <p key={i}>Right content line {i + 1}</p>
+          ))}
+        </div>
+    </>
 
   )
 }

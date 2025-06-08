@@ -1,7 +1,4 @@
-.page {
-  overflow: visible;
-  
-}
+
 
 .productInfoSection {
   display: grid;
@@ -11,6 +8,14 @@
   margin: 0 auto;
   max-width: 1500px;
 
+  position: relative;
+ 
+  /* これを追加すると中のコンテナが高さが出てそれによってscrollableになってポジションスティッキーが適用される */
+  /* height: 1400px; */
+
+}
+.productInfoSection::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
 }
 
 .imageSection {
@@ -25,8 +30,12 @@
   background-color: lightgray;
 
   position: sticky;
-  top: 100px;
+  top: 0px;
+  
   align-self: start;
+
+  /* ensure it’s not taller than viewport */
+  max-height: calc(100vh - 100px);
 }
 
 
@@ -40,4 +49,5 @@
   border-radius: 7px;
 
   overflow: visible;
+  height: fit-content;
 }
