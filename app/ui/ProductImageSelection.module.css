@@ -20,6 +20,7 @@
     height: 100%;
   }
 
+
     
     .imageButtonLeft, .imageButtonRight {
       display: flex;
@@ -40,12 +41,26 @@
       cursor: pointer;
     }
 
+    
+
     .imageButtonLeft {
       left: 2.5%;
     }
     
     .imageButtonRight {
       right: 2.5%;
+    }
+
+    @media(max-width: 670px) {
+      .imageButtonLeft, .imageButtonRight {
+        padding: 0.25rem;
+        top: auto;
+        bottom: 5%;
+      }
+      .imageButtonLeft {
+        Left: auto;
+        right: 15%;
+      }
     }
 
     .arrow {

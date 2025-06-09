@@ -2,6 +2,8 @@
 
 import styles from './ProductImageSelection.module.css';
 
+import { useSwipeable } from 'react-swipeable';
+
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -72,6 +74,14 @@ export default function ProductImageSelection() {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleArraowClick('right'),
+    onSwipedRight: () => handleArraowClick('left'),
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+
+  });
+
   function handleArraowClick(side: 'right' | 'left') {
     const currentIndex = images.findIndex((img) => img.id === selectedImage.id)
     if (side === 'right') {
@@ -88,7 +98,7 @@ export default function ProductImageSelection() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
+      <div className={styles.imageContainer} {...handlers}>
         <Image 
           src={selectedImage.src}
           alt={selectedImage.alt || 'image of product'}

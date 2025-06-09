@@ -3,10 +3,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 
 
   color: white;
-  width: 100vw;
+  width: 100%;
   /* background: linear-gradient(-45deg, #054688 0%, #054688 50%, #121755 100%); */
 
   z-index: 10;

@@ -2,6 +2,7 @@ import styles from './page.module.css'
 import type { Metadata } from 'next';
 import Markdown from 'react-markdown';
 
+
 import ProductImageSelection from '@/app/ui/ProductImageSelection';
 import CustomButton from '@/app/components/buttons/CustomButton';
 

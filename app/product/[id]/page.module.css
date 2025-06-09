@@ -85,3 +85,20 @@
     max-width: 400px;
     white-space: pre-wrap;
   }
+
+  @media(max-width: 670px) {
+    .productInfoSection {
+      grid-template-columns: 1fr;
+    }
+
+    .imageSection {
+      grid-column: span 1;
+      padding: 0;
+      position: static;
+      min-width: 300px;
+    }
+
+    .productDetail {
+      grid-column: span 1;
+    }
+  }
