@@ -1,0 +1,28 @@
+.main {
+  height: 95svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.link {
+  margin-top: 1rem;
+  border-radius: 4px;
+  background-color: skyblue;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+
+}
+
+.link:hover {
+  background-color: blue;
+}

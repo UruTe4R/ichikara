@@ -1,4 +1,4 @@
-import styles from '@/app/not-found.module.css';
+import styles from '@/app/(marketing)/not-found.module.css';
 
 import Link from 'next/link';
  

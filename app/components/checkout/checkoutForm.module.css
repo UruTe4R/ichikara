@@ -1,0 +1,31 @@
+.formsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.addressFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.addressForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.kanjiInputs,
+.kanaInputs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+}
+

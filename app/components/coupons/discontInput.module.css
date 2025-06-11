@@ -1,0 +1,36 @@
+.container > * + * {
+  margin-top: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+
+  gap: 0.5rem;
+}
+.input {
+  flex: 5;
+}
+
+.button {
+  flex: 1; 
+  min-width: 40px;
+  background-color: var(--button-blue);
+  border: none;
+  border-radius: var(--rlarge);
+
+  cursor: pointer;
+
+  opacity: var(--button-opacity);
+  color: white;
+}
+.button:hover {
+  opacity: 1;
+  
+}
+.button:active {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+

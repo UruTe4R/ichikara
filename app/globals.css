@@ -3,9 +3,19 @@
   --background: #ffffff;
   --foreground: #171717;
   --ichikara-blue: #054688;
+  --button-blue: #0076d7;
+  --button-opacity: 0.8;
   /* width */
   --largewidth: 1500px;
   --spwidth: 476px;
+
+  /* border */
+  --rlarge: 8px;
+  --rsmall: 4px;
+
+
+  /* checkoutpage */
+  --checkoutpage-width: 1300px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -78,4 +88,10 @@ input:focus {
 
 input::placeholder {
   font-size: 0.75rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

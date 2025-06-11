@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  justify-content: center;
+  max-width: var(--largewidth);
+}
+
+.cartContainer {
+  width: var(--largewidth);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+  .cartItemsContainer {
+    grid-column: span 2;
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+  }
+
+  @media(min-width: 375px) {
+    .cartItemsContainer {
+      min-width: 200px;
+    }
+  }
+
+    .cartItems {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cartItems > * + * {
+      border-top: 1px solid gray;
+      padding-top: 1rem;
+    }
+
+.checkoutWrapper {
+  grid-column: span 1;
+  min-width: 187px;
+  margin-bottom: 1rem;
+}
+
+@media(max-width:1000px) {
+  .cartItemsContainer {
+    grid-column: span 3;
+  }
+
+  .checkoutWrapper {
+    grid-column: span 3;
+  }
+}
+
+.checkoutContainer {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: sticky;
+    top: 100px;
+    padding-top: 1rem;
+}
+
+  .subtotal, .fee, .discount, .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subtotalText, .feeText, .discountText, .totalText {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .total {
+    border-top: 1px solid gray;
+    padding-top: 1rem;
+  }
+
+
+  

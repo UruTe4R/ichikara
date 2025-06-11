@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
+import "@/app/(checkout)/checkoutGlobal.css";
 import Head from 'next/head';
 
-import Nav from "@/app/components/navbar/Nav";
+import CheckoutNav from "@/app/components/checkout/CheckoutNav";
 import Footer from "@/app/components/footer/Footer";
 import ScrollRestorationClient from "@/app/ui/ScrollRestorationClient";
 
@@ -25,8 +26,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body>
+        <CheckoutNav />
         <ScrollRestorationClient />
-        <Nav />
         {children}
         <Footer />
       </body>

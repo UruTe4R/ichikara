@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+
+}
+
+.container > * + * {
+  margin-top: 1rem;
+}
+
+.arrowContainer {
+  font-size: 1.25rem;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+
+.icon {
+  width: 1.5rem;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-in-out;
+}
+.rotateBack {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.expand {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.collapse {
+  max-height: 0;
+  margin: 0;
+  transition: max-height 0.3s ease-in-out;
+}

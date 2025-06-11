@@ -1,6 +1,6 @@
 'use client';
  
-import styles from '@/app/error.module.css';
+import styles from '@/app/(marketing)/error.module.css';
 
 import { useEffect } from 'react';
  

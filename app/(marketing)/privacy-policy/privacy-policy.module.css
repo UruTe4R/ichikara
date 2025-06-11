@@ -1,0 +1,9 @@
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  white-space: pre-wrap;
+  width: calc(var(--largewidth) - 300px);
+}
