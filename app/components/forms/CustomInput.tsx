@@ -9,21 +9,25 @@ interface CustomInputProps {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; 
   readOnly?: boolean;
+  disabled?: boolean;
+  required?: boolean;
 }
 
 
-export default function CustomInput({type, placeholder, id, className, value, onChange, readOnly=false}: CustomInputProps) {
+export default function CustomInput({type, placeholder, id, className, value, onChange, readOnly=false, disabled=false, required=true}: CustomInputProps) {
   return (
-    <div className={styles.formGroup}>
+    <div className={`${styles.formGroup} ${className}`}>
       <input
         type={type}
-        className={`${styles.input} ${className}`}
+        className={`${styles.input}`}
         id={id}
         placeholder=''
-        required
+        required={required}
         value={value}
         onChange={onChange}
         readOnly={readOnly}
+        disabled={disabled}
+  
         />
       <label htmlFor={id} className={styles.label}>{placeholder}</label>
     </div>

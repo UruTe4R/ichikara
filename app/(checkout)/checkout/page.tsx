@@ -1,7 +1,9 @@
 import styles from './checkoutPage.module.css'
 
 import CheckoutForm from '@/app/components/checkout/CheckoutForm';
-
+import CheckoutSummary from '@/app/components/checkout/CheckoutSummary';
+import CouponInput from '@/app/components/coupons/CouponInput';
+import DiscountInput from '@/app/components/coupons/DiscontInput';
 
 
 import type { Metadata } from 'next';
@@ -18,10 +20,18 @@ export default function CheckoutPage() {
       <div className={styles.gridContainer}>
         <div className={styles.leftContainer}>
           <CheckoutForm />
+          {Array.from({ length: 100 }).map((n, i) => {
+            return (
+              <div key={i}>line{i}</div>
+            )
+          })}
+
         </div>
 
         <div className={styles.rightContainer}>
-          hi
+          <div className={styles.stickyContainer}>
+            <CheckoutSummary />
+          </div>
         </div>
       </div>
     </main>

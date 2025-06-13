@@ -9,6 +9,7 @@
   font-weight: 500;
 }
 
+
 .addressFormContainer {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,10 @@
   gap: 1rem;
 }
 
+.email {
+  max-width: 1000px !important;
+}
+
 .kanjiInputs,
 .kanaInputs {
   display: flex;
@@ -29,3 +34,83 @@
 
 }
 
+.addressInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  
+}
+
+.postalInputs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: relative;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: var(--rlarge);
+  padding: 0.5rem;
+  
+  max-height: 200px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.searchResultsHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.close {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.2rem 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 1rem;
+}
+.hidden {
+  display: none;
+}
+
+.searchResult {
+  cursor: pointer;
+}
+.searchResult:hover,
+.close:hover {
+  background-color: #f2f2f2;
+}
+
+
+.selectWrapper {
+  width: 100%;
+}
+
+
+.addtionalAddressInputs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.tel {
+  max-width: 1000px !important;
+}

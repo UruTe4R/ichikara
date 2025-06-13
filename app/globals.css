@@ -95,3 +95,37 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+/* Select component style */
+.my-select-container {
+  width: 100% !important;
+}
+
+
+.my-select__control {
+  border-radius: 8px !important;
+  height: 3.5rem !important;
+  /* box-shadow: none !important; */
+}
+
+.my-select__input {
+  box-shadow: none !important;
+  margin-left: 0.5rem !important;
+}
+
+.my-select__placeholder {
+  margin-left: 0.5rem !important;
+}
+
+.my-select__single-value {
+  padding-left: 0.5rem;
+}
+.my-select__option--is-focused {
+  /* background-color: lightgray !important; */
+  cursor: pointer !important;
+}
+.my-select__option--is-selected {
+  background-color: #2684FF !important;
+}
+

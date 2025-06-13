@@ -1,0 +1,22 @@
+
+.checkoutSummary {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subtotal,
+.shippingcost,
+.discount,
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.totalText,
+.totalPrice {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
